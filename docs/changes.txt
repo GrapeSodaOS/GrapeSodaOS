@@ -1,0 +1,6 @@
+                                     GrapeSodaOS
+                                       Changes
+---------------------------------------------------------------------------------------
+GrapeSodaOS v0.0.1
+==================
+Simple hello, world boot sector
