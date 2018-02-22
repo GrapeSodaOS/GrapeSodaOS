@@ -20,7 +20,8 @@
 
 	jmp GrapeSodaBoot								; Start booting
 	
-	_helloworld		db 'Hello, World! - GrapeSodaOS', 0			; Hello, world message
+	GSLDR_LOADING_MSG		db 'Loading GSLDR...', 13, 10 0			; Hello, world message
+	LOADING_DB_MSG			db 'Loading File Database', 13, 10, 0		; Database Loading message
 	
 	PrintString:									; Our print string routine
 		pusha									; Save our registers
@@ -48,7 +49,7 @@
 		mov fs, ax
 		mov gs, ax
 		
-		mov si, _helloworld							; Time to print "Hello, World!"
+		mov si, GSLDR_LOADING_MSG						; Time to print "Hello, World!"
 		call PrintString							; Print the string
 		
 		cli									; Clear the interrupts
